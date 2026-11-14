@@ -15,16 +15,14 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper --gradle-version 8.8
+
       - name: Grant execute permission for gradlew
-        run: chmod +x gradlew || true
+        run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: |
-          if [ -f "gradlew" ]; then
-            ./gradlew build
-          else
-            gradle wrapper && ./gradlew build
-          fi
+        run: ./gradlew build
 
       - name: Upload Artifact (.jar)
         uses: actions/upload-artifact@v4
