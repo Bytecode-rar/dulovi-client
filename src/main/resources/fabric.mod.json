@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "dulovi",
+  "version": "1.0.0",
+  "name": "Dulovi Client",
+  "description": "Custom Fabric client based on LiquidBonus for Minecraft 1.21.1",
+  "authors": [
+    "Idris"
+  ],
+  "contact": {
+    "sources": "https://github.com/ ByteCode-rar /dulovi-client"
+  },
+  "license": "MIT",
+  "icon": "assets/dulovi/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.dulovi.DuloviClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
